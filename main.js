@@ -165,11 +165,11 @@ const detectCode = () => {
       // window.barcodeVal = barcode.rawValue;
       window.barcodeVal = 'Success'
 
-      if (!visitedUrl) {
-        console.log('FETCH URL');
-        postData(barcode.rawValue);
-        visitedUrl = true;
-      }
+      // if (!visitedUrl) {
+      console.log('FETCH URL');
+      postData(barcode.rawValue);
+      visitedUrl = true;
+      // }
     }
   }).catch(err => {
     console.error(err);
@@ -177,4 +177,4 @@ const detectCode = () => {
 }
 
 // Run detect code function every 100 milliseconds
-setInterval(detectCode, 1000);
+setInterval(detectCode, 3000);
