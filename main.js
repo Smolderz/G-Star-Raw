@@ -139,7 +139,9 @@ async function postData(url = '',data = {}) {
     },
     redirect: "follow",
     referrerPolicy: "no-referrer",
-    // body: JSON.stringify(data), // body data type must match "Content-Type" header
+    body: JSON.stringify({
+      customerId: 123456
+    }),
   });
 
   console.log(response.json());
