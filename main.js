@@ -127,7 +127,10 @@ const drawCodePath = ({cornerPoints}) => {
 
 let visitedUrl = false;
 
-async function postData(url = '',data = {}) {
+async function postData(url = '',data = {}) {;
+  const splitUrl = url.split('?customerid=');
+  const customerId = splitUrl[1];
+
   const response = await fetch(url, {
     method: "POST",
     mode: "no-cors", // no-cors, *cors, same-origin
@@ -139,10 +142,8 @@ async function postData(url = '',data = {}) {
     },
     redirect: "follow",
     referrerPolicy: "no-referrer",
-    body: '123456'
+    body: customerId
   });
-
-  // console.log(response.json());
 }
 
 // Detect code function 
