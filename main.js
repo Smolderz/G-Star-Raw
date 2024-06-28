@@ -139,9 +139,7 @@ async function postData(url = '',data = {}) {
     },
     redirect: "follow",
     referrerPolicy: "no-referrer",
-    body: {
-      customerId: 123456
-    },
+    body: '123456'
   });
 
   // console.log(response.json());
