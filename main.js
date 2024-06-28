@@ -139,12 +139,12 @@ async function postData(url = '',data = {}) {
     },
     redirect: "follow",
     referrerPolicy: "no-referrer",
-    body: JSON.stringify({
+    body: {
       customerId: 123456
-    }),
+    },
   });
 
-  console.log(response.json());
+  // console.log(response.json());
 }
 
 // Detect code function 
