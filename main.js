@@ -141,7 +141,8 @@ async function postData(url = '',data = {}) {
     referrerPolicy: "no-referrer",
     // body: JSON.stringify(data), // body data type must match "Content-Type" header
   });
-  return response.json(); // parses JSON response into native JavaScript object
+
+  console.log(response.json());
 }
 
 // Detect code function 
