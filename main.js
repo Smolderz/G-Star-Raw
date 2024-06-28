@@ -135,6 +135,7 @@ async function postData(url = '',data = {}) {
     // credentials: "same-origin", // include, *same-origin, omit
     headers: {
       "Content-Type": "application/json",
+      'Authorization': 'Basic ' + btoa('rob:robn8n')
     },
     redirect: "follow",
     referrerPolicy: "no-referrer",
